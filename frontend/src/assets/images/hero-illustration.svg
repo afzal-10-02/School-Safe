@@ -1,0 +1,40 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="800" height="600" fill="#E0F7FA"/>
+
+<!-- Background elements (hills, clouds) -->
+<path d="M0 400L200 350L400 400L600 350L800 400V600H0V400Z" fill="#C8E6C9"/>
+<circle cx="650" cy="150" r="50" fill="#FFF9C4"/>
+<path d="M50 200C80 150 150 150 180 200C150 250 80 250 50 200Z" fill="#FFFFFF"/>
+<path d="M250 180C280 130 350 130 380 180C350 230 280 230 250 180Z" fill="#FFFFFF"/>
+
+<!-- Main illustration: children around a tablet -->
+<rect x="300" y="100" width="200" height="300" rx="20" fill="#BBDEFB" stroke="#2196F3" stroke-width="5"/>
+<rect x="310" y="110" width="180" height="280" rx="10" fill="#FFFFFF"/>
+
+<!-- Tablet content: house on a hill with water -->
+<path d="M340 250L370 230L400 250L400 280L340 280V250Z" fill="#FFEB3B"/>
+<rect x="350" y="240" width="40" height="20" fill="#FF9800"/>
+<rect x="365" y="250" width="10" height="10" fill="#FFFFFF"/>
+<path d="M310 280C320 290 330 290 340 280C350 290 360 290 370 280C380 290 390 290 400 280C410 290 420 290 430 280C440 290 450 290 460 280C470 290 480 290 490 280V390H310V280Z" fill="#8BC34A"/>
+<path d="M310 320C330 330 350 330 370 320C390 330 410 330 430 320C450 330 470 330 490 320V390H310V320Z" fill="#2196F3"/>
+<path d="M310 340C330 350 350 350 370 340C390 350 410 350 430 340C450 350 470 350 490 340V390H310V340Z" fill="#1976D2"/>
+
+<!-- Children figures (simplified) -->
+<circle cx="250" cy="450" r="30" fill="#FFCDD2"/>
+<rect x="230" y="480" width="40" height="60" fill="#FFEB3B"/>
+
+<circle cx="550" cy="450" r="30" fill="#FFCDD2"/>
+<rect x="530" y="480" width="40" height="60" fill="#C5CAE9"/>
+
+<circle cx="200" cy="500" r="30" fill="#FFCDD2"/>
+<rect x="180" y="530" width="40" height="60" fill="#8BC34A"/>
+
+<circle cx="600" cy="500" r="30" fill="#FFCDD2"/>
+<rect x="580" y="530" width="40" height="60" fill="#FFEB3B"/>
+
+<!-- Temple/Mosque in background -->
+<rect x="650" y="300" width="100" height="100" fill="#FFD54F"/>
+<path d="M700 250L680 300H720L700 250Z" fill="#FFECB3"/>
+<circle cx="700" cy="240" r="10" fill="#FFD54F"/>
+
+</svg>

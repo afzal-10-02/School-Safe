@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Character Body -->
+  <circle cx="100" cy="100" r="80" fill="#FFD38E" />
+  <circle cx="100" cy="100" r="65" fill="#FFA740" />
+  
+  <!-- Eyes -->
+  <circle cx="70" cy="80" r="15" fill="#FFFFFF" />
+  <circle cx="130" cy="80" r="15" fill="#FFFFFF" />
+  <circle cx="70" cy="80" r="8" fill="#3D4852" />
+  <circle cx="130" cy="80" r="8" fill="#3D4852" />
+  
+  <!-- Eyebrows -->
+  <path d="M60,65 Q70,55 80,65" stroke="#3D4852" stroke-width="3" fill="none" />
+  <path d="M120,65 Q130,55 140,65" stroke="#3D4852" stroke-width="3" fill="none" />
+  
+  <!-- Rosy Cheeks -->
+  <circle cx="60" cy="95" r="10" fill="#FF9999" opacity="0.6" />
+  <circle cx="140" cy="95" r="10" fill="#FF9999" opacity="0.6" />
+  
+  <!-- Smile -->
+  <path d="M70,120 Q100,145 130,120" stroke="#3D4852" stroke-width="4" fill="none" />
+  
+  <!-- Hair -->
+  <path d="M40,40 Q50,20 70,30 Q90,10 110,30 Q130,20 140,40" fill="#8B4513" />
+  
+  <!-- Safety Helmet -->
+  <path d="M30,60 Q50,30 100,30 Q150,30 170,60" fill="#FF6B6B" />
+  <path d="M40,60 Q60,40 100,40 Q140,40 160,60" fill="#FFD166" />
+  
+  <!-- Safety Badge -->
+  <circle cx="100" cy="170" r="15" fill="#4ECDC4" />
+  <path d="M100,160 L105,170 L115,170 L107,177 L110,187 L100,182 L90,187 L93,177 L85,170 L95,170 Z" fill="#FFD166" />
+</svg>
