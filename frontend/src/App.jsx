@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import StartScreen from './Pages/StartScreen';
+import StartScreen from './pages/StartScreen';
 import QuizScreen from './pages/QuizScreen';
-import ResultsScreen from './Pages/ResultsScreen';
+import ResultsScreen from './pages/ResultsScreen';
 import { questions } from './questionsData';
 import { useState } from 'react';
 import logo from './assets/images/logo.svg';
