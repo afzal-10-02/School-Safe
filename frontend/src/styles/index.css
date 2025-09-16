@@ -43,6 +43,10 @@
   width: 500px;
 }
 
+.option {
+    cursor: pointer;
+    border: 0.1px solid grey;
+}
 
 #root, body, html {
   display: flex; /* Enables flexbox layout */
