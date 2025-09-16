@@ -5,6 +5,9 @@ import ResultsScreen from './pages/ResultsScreen';
 import { questions } from './questionsData';
 import { useState } from 'react';
 import logo from './assets/images/logo.svg';
+import AuthPage from './pages/AuthScreen';
+import { motion } from 'framer-motion';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -24,48 +27,62 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        <div className="navbar">
-          <div className="logo">
+
+      <Navbar bg="white" expand="lg" fixed="top" className="shadow-sm">
+        <Container>
+          <Navbar.Brand href="#home" as={motion.a} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             <img
               src={logo}
+              height="40"
+              className="d-inline-block align-top me-2"
               alt="logo"
             />
-            <span>DISASTER<br/>PUNJAB</span>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/quiz">Quizzes</a></li>
-              <li><a href="#">Topics</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </nav>
-          <button className="login-btn">Login</button>
-        </div>
+            <span className="fw-bold" style={{ color: 'var(--primary-color)', fontSize: '1.8rem', lineHeight: '1' }}>
+              DISASTER<br />PUNJAB
+            </span>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto me-4">
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.1 }} href="/" className="mx-2">Home</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.1 }} href="/quiz" className="mx-2">Quizzes</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.1 }} href="#" className="mx-2">Topics</Nav.Link>
+              <Nav.Link as={motion.a} whileHover={{ scale: 1.1 }} href="#" className="mx-2">Resources</Nav.Link>
+            </Nav>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button href="/Auth" variant="secondary" className="rounded-pill px-4 py-2 fw-bold shadow-sm">
+                Login
+              </Button>
+            </motion.div>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <div style={{ height: '80px' }}></div> {/* Spacer for fixed navbar */}
 
-        <Routes>
-          <Route path="/" element={<StartScreen />} />
-          <Route
-            path="/quiz"
-            element={
-              currentQuestionIndex < questions.length ? (
-                <QuizScreen
-                  question={questions[currentQuestionIndex]}
-                  questionIndex={currentQuestionIndex}
-                  totalQuestions={questions.length}
-                  onAnswer={handleAnswer}
-                />
-              ) : (
-                <ResultsScreen score={score} totalQuestions={questions.length} onRestart={restartQuiz} />
-              )
-            }
-          />
-        </Routes>
-        <footer>
-          <p>© 2023 Disaster Ready Punjab - Fun Safety Quiz for Kids</p>
-        </footer>
-      </div>
+      <motion.div className='main-content'>
+      <Routes>
+        <Route path="/" element={<StartScreen />} />
+        <Route path="/Auth" element={<AuthPage />} />
+        <Route
+          path="/quiz"
+          element={
+            currentQuestionIndex < questions.length ? (
+              <QuizScreen
+                question={questions[currentQuestionIndex]}
+                questionIndex={currentQuestionIndex}
+                totalQuestions={questions.length}
+                onAnswer={handleAnswer}
+              />
+            ) : (
+              <ResultsScreen score={score} totalQuestions={questions.length} onRestart={restartQuiz} />
+            )
+          }
+        />
+      </Routes>
+      </motion.div>
+      <footer className="text-center mt-3">
+    © 2023 Disaster Ready Punjab - Fun Safety Quiz for Kids
+</footer>
     </Router>
   );
 }
