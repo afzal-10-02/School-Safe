@@ -45,7 +45,7 @@
 
 .option {
     cursor: pointer;
-    border: 1px solid grey;
+    border: 0.1px solid grey;
 }
 
 #root, body, html {
